@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Variables*/
+  /*color*/
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --soft-white: hsl(0, 33%, 98%);
+
+  /*fonts*/
+
+  --main-font: 'Kumbh Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 18px;
+}
+
+.container {
+  background-color: var(--dark-cyan);
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /*tudo o que estiver fora do espaço container ficará escondido, porém é preciso setar a position relative*/
+}
+/*Background images*/
+.bg-circle-top {
+  position: absolute;
+  top: -50%;
+  right: 50%;
+  z-index: 0;
+}
+.bg-circle-bot {
+  position: absolute;
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  z-index: 0;
+}
+
+/*CARD*/
+.card-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /*card está envolvido pelo card-container*/
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 325px;
+  height: 375px;
+  position: relative;
+  z-index: 1;
+
+  border-radius: 20px;
+
+  background-color: var(--soft-white);
+  background-image: url('images/bg-pattern-card.svg');
+  background-repeat: no-repeat;
+}
+
+.card-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo img {
+  max-width: 100%;
+  border-radius: 50px;
+  border: solid 5px var(--soft-white);
+}
+
+.name {
+  padding-top: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.age {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+
+.location {
+  color: var(--dark-gray);
+  font-size: 16px;
+  margin: 1rem;
+}
+
+.card-bottom {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid var(--dark-gray);
+  width: 100%;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-around;
+}
+.item-numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0.2rem;
+}
+
+.details {
+  color: var(--dark-gray);
+  font-size: 16px;
+}
+.attribution {
+  text-align: center;
+}
